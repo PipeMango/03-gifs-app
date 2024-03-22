@@ -41,7 +41,7 @@ export class GifsService {
     const params = new HttpParams()
     .set('api_key', this._apiKey)
     .set('q', tag)
-    .set('limit', '10')
+    .set('limit', '15')
 
     this.http.get<SearchResponse>(`${this.serviceUrl}/search`, {params: params})
     .subscribe(resp  => {
